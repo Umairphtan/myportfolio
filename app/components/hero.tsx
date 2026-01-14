@@ -28,9 +28,12 @@ export default function Hero() {
             View Projects
           </button>
 
-          <button className="px-8 py-4 rounded-xl border text-white border-white hover:bg-cyan-600 transition">
+          <a
+            href="/umairkhanresume.pdf" 
+            download="umairkhanresume.pdf"
+            className="px-8 py-4 rounded-xl border text-white border-white hover:bg-cyan-600 transition">
             Download CV
-          </button>
+          </a>
         </div>
       </motion.div>
     </section>
