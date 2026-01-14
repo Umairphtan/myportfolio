@@ -1,32 +1,37 @@
 "use client";
-import Link from "next/link";
-import { projects } from "@/app/data/project";
+
 import { motion } from "framer-motion";
+import { ExternalLink, Github } from "lucide-react";
+import { Project } from "@/app/types/project";
 
-export default function Projects() {
+export default function Card({ project }: { project: Project }) {
     return (
-        <section id="projects" className="py-32">
-            <h2 className="text-4xl font-bold text-center mb-12">Projects</h2>
+        <motion.div
+            whileHover={{ y: -10 }}
+            className="rounded-2xl border border-white/10 bg-white/5 p-4  backdrop-blur mt-20 "
+        >
+            <h3 className="text-xl font-semibold text-white">{project.title}</h3>
+            <p className="mt-2 text-sm text-gray-400 text-yellow-500">{project.description}</p>
 
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
-                {projects.map((project, i) => (
-                    <motion.div
-                        key={project.slug}
-                        initial={{ opacity: 0, y: 40 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ delay: i * 0.1 }}
-                        className="rounded-2xl p-[1px] bg-gradient-to-br from-pink-500 via-purple-500 to-blue-500"
+            <div className="mt-4 flex flex-wrap gap-2 text-white">
+                {project.tech.map((tech) => (
+                    <span
+                        key={tech}
+                        className="rounded-full bg-white/10 px-3 py-1 text-xs"
                     >
-                        <Link
-                            href={`/projects/${project.slug}`}
-                            className="block bg-black rounded-2xl p-6 hover:bg-gray-900 transition"
-                        >
-                            <h3 className="text-xl font-semibold">{project.title}</h3>
-                            <p className="text-gray-400 mt-2">{project.description}</p>
-                        </Link>
-                    </motion.div>
+                        {tech}
+                    </span>
                 ))}
             </div>
-        </section>
+
+            <div className="mt-5 flex gap-4 text-white">
+                <a href={project.liveUrl} target="_blank">
+                    <ExternalLink size={18} />
+                </a>
+                <a href={project.githubUrl} target="_blank">
+                    <Github size={18} />
+                </a>
+            </div>
+        </motion.div>
     );
 }
