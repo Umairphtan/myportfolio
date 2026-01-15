@@ -52,8 +52,7 @@ export default function Footer() {
                 {/* Copyright */}
                 <p className="text-sm text-gray-500 text-center">
                     © 2026 <span className="text-white font-medium">Umair Khan</span> —
-                    Built with <span className="text-purple-400">Next.js</span> &{" "}
-                    <span className="text-pink-400">Framer Motion</span>
+              
                 </p>
             </div>
         </footer>

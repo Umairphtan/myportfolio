@@ -17,7 +17,7 @@ export default function Navbar() {
         <div className="space-x-6 text-sm text-xl text-white">
           <Link href="/" className="hover:text-pink-400">Skills</Link>
           <Link href="/projects" className="hover:text-purple-400">Projects</Link>
-          <Link href="#contact" className="hover:text-blue-400">Contact</Link>
+          <Link href="/contact" className="hover:text-blue-400">Contact</Link>
         </div>
       </div>
     </motion.nav>
