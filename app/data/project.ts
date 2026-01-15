@@ -19,7 +19,7 @@ export const projects: Project[] = [
   },
   {
     slug: "mern-dashboard",
-    title: " ADMIN PANEL  ",
+    title: " ADMIN PANEL  FULL STACK ",
     description: "Role based admin dashboard",
     tech: ["React", "Tailwind", "JWT"],
     liveUrl: "https://dashboard.vercel.app",
@@ -35,8 +35,8 @@ export const projects: Project[] = [
   },
   {
     slug: "..",
-    title: "DMS-MANAGMENT SYSTEM",
-    description: "Role based admin dashboard",
+    title: "DMS-MANAGMENT SYSTEM FULL STACK",
+    description: "doctors manage ment sysytem with receptionist admin and docotrs role base ",
     tech: ["React", "Tailwind", "JWT"],
     liveUrl: "//",
     githubUrl: "https://github.com/beingharisali/full-stack-pqms-next",
